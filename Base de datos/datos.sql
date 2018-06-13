@@ -1,3 +1,5 @@
+USE `sismos`;
+
 INSERT INTO zona (nombre) 
 VALUES ('Norte'),
 ('Sur'),

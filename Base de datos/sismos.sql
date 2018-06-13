@@ -14,6 +14,45 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = ucs2
 COLLATE = ucs2_spanish2_ci;
 
+CREATE  TABLE IF NOT EXISTS `sismos`.`Zona` (
+  `idZona` INT(11) NOT NULL AUTO_INCREMENT ,
+  `nombre` VARCHAR(45) NULL DEFAULT NULL ,
+  PRIMARY KEY (`idZona`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = ucs2
+COLLATE = ucs2_spanish2_ci;
+
+CREATE  TABLE IF NOT EXISTS `sismos`.`Tipo_dano` (
+  `idTipo_dano` INT(11) NOT NULL AUTO_INCREMENT ,
+  `Tipo_dano` VARCHAR(45) NULL DEFAULT NULL ,
+  PRIMARY KEY (`idTipo_dano`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = ucs2
+COLLATE = ucs2_spanish2_ci;
+
+CREATE  TABLE IF NOT EXISTS `sismos`.`Estados` (
+  `idEstados` INT(11) NOT NULL AUTO_INCREMENT ,
+  `nombre_estado` VARCHAR(45) NOT NULL ,
+  PRIMARY KEY (`idEstados`) )
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = ucs2
+COLLATE = ucs2_spanish2_ci;
+
+CREATE  TABLE IF NOT EXISTS `sismos`.`Deleg_Mun` (
+  `idDelegacion` INT(11) NOT NULL AUTO_INCREMENT ,
+  `nombre_delegacion` VARCHAR(45) NULL DEFAULT NULL ,
+  `Estados_idEstados` INT(11) NOT NULL ,
+  PRIMARY KEY (`idDelegacion`) ,
+  INDEX `fk_Delegacion_Estados1_idx` (`Estados_idEstados` ASC) ,
+  CONSTRAINT `fk_Delegacion_Estados1`
+    FOREIGN KEY (`Estados_idEstados` )
+    REFERENCES `sismos`.`Estados` (`idEstados` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = ucs2
+COLLATE = ucs2_spanish2_ci;
+
 CREATE  TABLE IF NOT EXISTS `sismos`.`Vivienda` (
   `idVivienda` INT(11) NOT NULL AUTO_INCREMENT ,
   `tipo` VARCHAR(45) NULL DEFAULT NULL ,
@@ -54,45 +93,6 @@ CREATE  TABLE IF NOT EXISTS `sismos`.`Vivienda` (
     REFERENCES `sismos`.`Zona` (`idZona` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = ucs2
-COLLATE = ucs2_spanish2_ci;
-
-CREATE  TABLE IF NOT EXISTS `sismos`.`Tipo_dano` (
-  `idTipo_dano` INT(11) NOT NULL AUTO_INCREMENT ,
-  `Tipo_dano` VARCHAR(45) NULL DEFAULT NULL ,
-  PRIMARY KEY (`idTipo_dano`) )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = ucs2
-COLLATE = ucs2_spanish2_ci;
-
-CREATE  TABLE IF NOT EXISTS `sismos`.`Estados` (
-  `idEstados` INT(11) NOT NULL AUTO_INCREMENT ,
-  `nombre_estado` VARCHAR(45) NOT NULL ,
-  PRIMARY KEY (`idEstados`) )
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = ucs2
-COLLATE = ucs2_spanish2_ci;
-
-CREATE  TABLE IF NOT EXISTS `sismos`.`Deleg_Mun` (
-  `idDelegacion` INT(11) NOT NULL AUTO_INCREMENT ,
-  `nombre_delegacion` VARCHAR(45) NULL DEFAULT NULL ,
-  `Estados_idEstados` INT(11) NOT NULL ,
-  PRIMARY KEY (`idDelegacion`) ,
-  INDEX `fk_Delegacion_Estados1_idx` (`Estados_idEstados` ASC) ,
-  CONSTRAINT `fk_Delegacion_Estados1`
-    FOREIGN KEY (`Estados_idEstados` )
-    REFERENCES `sismos`.`Estados` (`idEstados` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = ucs2
-COLLATE = ucs2_spanish2_ci;
-
-CREATE  TABLE IF NOT EXISTS `sismos`.`Zona` (
-  `idZona` INT(11) NOT NULL AUTO_INCREMENT ,
-  `nombre` VARCHAR(45) NULL DEFAULT NULL ,
-  PRIMARY KEY (`idZona`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = ucs2
 COLLATE = ucs2_spanish2_ci;
