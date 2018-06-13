@@ -69,7 +69,6 @@ COLLATE = ucs2_spanish2_ci;
 CREATE  TABLE IF NOT EXISTS `sismos`.`Estados` (
   `idEstados` INT(11) NOT NULL AUTO_INCREMENT ,
   `nombre_estado` VARCHAR(45) NOT NULL ,
-  `Zona_geografica_idZona_geografica` INT(11) NOT NULL ,
   PRIMARY KEY (`idEstados`) )
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = ucs2
