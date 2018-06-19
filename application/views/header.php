@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url()?>bootstrap/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="<?php echo base_url()?>bootstrap/css/bootstrap-grid.min.css" type="text/css">
-
+    <link rel="stylesheet" href="<?php echo base_url()?>bootstrap/css/maps.css" type="text/css">
     <title>Hello, world!</title>
   </head>
   <body>
