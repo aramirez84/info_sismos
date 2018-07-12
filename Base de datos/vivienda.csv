@@ -1,0 +1,17 @@
+tipo,Nivel_dano_idNivel_dano,Tipo_dano_idTipo_dano,Delegacion_idDelegacion,nombre,direccion,latitud,longuitud,tipo_comercio,descripcon,Zona_idZona,,,,,,,,,
+Escuela,1,"	3",14,San Francisco Culhuacan,"Culhuacan CTM V, 04260 Ciudad de México, CDMX",19.329175,-99.111292,Universidad,Prueba  maps,4,,1,Alto,1,Grietas,1,Álvaro Obregón,1,Norte
+,,,,,,,,,,,,2,Medio,"	2",Cosmetico,2,Azcapotzalco,2,Sur
+,,,,,,,,,,,,3,Bajo,"	3",Estructural,3,Benito Juárez,3,Centro
+,,,,,,,,,,,,4,Critico,"	4",Muros de carga,4,Coyoacán,4,Oriente
+,,,,,,,,,,,,5,Reparable,"	5",Cadena,5,Cuajimalpa de Morelos,5,Poniente
+,,,,,,,,,,,,,,"	6",Escaleras,6,Cuauhtémoc,,
+,,,,,,,,,,,,,,"	7",Muro de concreto,7,Gustavo A. Madero,,
+,,,,,,,,,,,,,,"	8",Losas,8,Iztacalco,,
+,,,,,,,,,,,,,,"	9",Columnas,9,Iztapalapa,,
+,,,,,,,,,,,,,,"	10",Vigas o trabes,10,Magdalena Contreras,,
+,,,,,,,,,,,,,,"	11",Cimentación,11,Miguel Hidalgo,,
+,,,,,,,,,,,,,,,,12,Milpa Alta,,
+,,,,,,,,,,,,,,,,13,Tláhuac,,
+,,,,,,,,,,,,,,,,14,Tlalpan,,
+,,,,,,,,,,,,,,,,15,Venustiano Carranza,,
+,,,,,,,,,,,,,,,,16,Xochimilco,,
