@@ -9,7 +9,7 @@
         <a class="nav-link" href="#">Graficas</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Cargar Información</a>
+          <a class="nav-link" href="<?php echo base_url()?>index.php/principal/carga_info">Cargar Información</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Reportes</a>
