@@ -61,6 +61,16 @@ class Consultas extends CI_Model{
             return $NivelDano;
          }
     }
+    
+    /*###########################################################################3
+     * 
+     */
+    public function insertarVivienda($data)
+    {
+        $this->db->insert_batch('vivienda', $data);
+        $vivineda_agregada=  $this->db->affected_rows();
+        return $vivineda_agregada;
+    }
 }
 /* End of file consultas.php */
 /* Location: ./application/models/consultas.php */
