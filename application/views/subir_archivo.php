@@ -5,16 +5,22 @@
 </div>
 <div class="head-body-libros">
     <div class="box-books-load">
-        <table>
-            <tr>
-                <td style="width: 50px"></td>
-		<div class="btn">
-                    <i class="fa  fa-cloud-upload">
-                        <input id="portada" name="portada" class="input-file" type="file" required="">
-                    </i>
+        <div class="btn">
+            <?php
+            if(isset($mensaje) && !empty($mensaje))
+            {
+                echo '<div class="alert alert-danger input-file form-control-file" role="alert">';
+                echo "$mensaje!";
+                echo '</div>';                
+            }
+            ?>
+            <form action='procesar_archivo' method='post' enctype="multipart/form-data">
+                <div class="form-group fa  fa-cloud-upload">
+                    <label for="exampleFormControlFile1">Importar Archivo : </label>
+                    <input id="sel_file" name="sel_file" class="input-file form-control-file" type="file" required="">
                 </div>
-		</td>
-            </tr>
-        </table>
+                <input type='submit' name='submit' value='submit' class="input-file form-control-file">
+            </form>
+        </div>
     </div>
 </div>
