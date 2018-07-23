@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?php echo base_url()?>bootstrap/css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="<?php echo base_url()?>bootstrap/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="<?php echo base_url()?>bootstrap/css/maps.css" type="text/css">
+    <script src="<?php echo base_url()?>bootstrap/js/maps.js" type="text/javascript"></script>
     <title>Proyecto Sismos</title>
   </head>
   <body>

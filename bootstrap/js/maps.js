@@ -57,7 +57,7 @@
             new XMLHttpRequest;
 
         request.onreadystatechange = function() {
-          if (request.readyState == 4) {
+          if (request.readyState === 4) {
             request.onreadystatechange = doNothing;
             callback(request, request.status);
           }
