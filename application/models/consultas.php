@@ -62,6 +62,21 @@ class Consultas extends CI_Model{
          }
     }
     
+    function get_tipo_habitación()
+    {
+        $this->db->select('tipo');
+        $this->db->group_by('tipo');
+        $queryTipo_habitacion=  $this->db->get('vivienda');
+        if($queryTipo_habitacion->num_rows()!=0)
+         {
+            foreach($queryTipo_habitacion->result_array() as $row)
+            {
+                $TipoHabitacion[]=$row;                
+            }
+            return $TipoHabitacion;
+         }
+    }
+    
     /*###########################################################################3
      * 
      */
