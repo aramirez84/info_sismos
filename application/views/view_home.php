@@ -13,9 +13,12 @@
             <label for="sel1">Tipo de habitación:</label>
             <select class="form-control" id="sel1">
                 <option selected="">Tipo habitación</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <?php
+                foreach ($tipoHabitacion as $row =>$value)
+                {
+                    echo '<option value="'.$row['idVivienda'].'">'.$value['tipo'].'</option>';
+                }
+                ?>
             </select>
         </div>
         <div class="custom-control custom-radio xmt-3">
@@ -33,6 +36,7 @@
         <div class="custom-control custom-radio xmt-3">
             <label for="sel1">Delegación:</label>
             <select class="form-control" id="sel1">
+                <option selected="">Delegaciones</option>
                 <?php 
                 foreach ($delegacion as $row =>$value)
                 {
