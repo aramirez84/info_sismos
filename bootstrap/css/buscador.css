@@ -1,0 +1,9 @@
+.preloader-box
+{
+	width: 100px;
+	height: 100px;
+	border:0px solid black;
+	margin:0 auto;
+	margin-top: 124px;
+	background-image: url('../img/359.GIF');
+}
