@@ -12,7 +12,7 @@ class Principal extends CI_Controller {
         $data['zonas'] =  $this->Consultas->get_zona();
         $data['delegacion'] = $this->Consultas->get_deleg_mun();
         $data['nivelDano'] = $this->Consultas->get_nivel_dano();
-        $data['tipoDano'] = $this->Consultas->get_tipo_dano();
+        $data['tipoHabitacion'] = $this->Consultas->get_tipo_habitación();
         $this->load->view('menu');
         $this->load->view('view_home',$data);
         $this->load->view('footer');
