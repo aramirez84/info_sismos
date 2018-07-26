@@ -11,48 +11,48 @@
         <h3>Busqueda</h3>
         <div class="custom-control custom-radio xmt-3">
             <label for="sel1">Tipo de habitación:</label>
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="habitacion">
                 <option selected="">Tipo habitación</option>
                 <?php
                 foreach ($tipoHabitacion as $row =>$value)
                 {
-                    echo '<option value="'.$row['idVivienda'].'">'.$value['tipo'].'</option>';
+                    echo '<option value="'.$value['tipo'].'">'.$value['tipo'].'</option>';
                 }
                 ?>
             </select>
         </div>
         <div class="custom-control custom-radio xmt-3">
             <label for="sel1">Nivel de daño:</label>
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="nivel">
                 <option selected="">Nivel daño</option>
                 <?php
                 foreach ($nivelDano as $row =>$value)
                 {
-                    echo '<option value="'.$row['idNivel_dano'].'">'.$value['nombre_dano'].'</option>';
+                    echo '<option value="'.$value['idNivel_dano'].'">'.$value['nombre_dano'].'</option>';
                 }
                 ?>
             </select>
         </div>
         <div class="custom-control custom-radio xmt-3">
             <label for="sel1">Delegación:</label>
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="delegacion">
                 <option selected="">Delegaciones</option>
                 <?php 
                 foreach ($delegacion as $row =>$value)
                 {
-                    echo '<option value="'.$row['idDelegacion'].'">'.$value['nombre_delegacion'].'</option>';
+                    echo '<option value="'.$value['idDelegacion'].'">'.$value['nombre_delegacion'].'</option>';
                 }
                 ?>
             </select>
         </div>
         <div class="custom-control custom-radio xmt-3">
             <label for="sel1">Zona geografica:</label>
-            <select class="form-control" id="sel1">
+            <select class="form-control" id="zona">
                 <option selected="">Zona geografica</option>
                 <?php 
                 foreach ($zonas as $row =>$value)
                 {
-                    echo '<option value="'.$row['idZona'].'">'.$value['nombre'].'</option>';
+                    echo '<option value="'.$value['idZona'].'">'.$value['nombre'].'</option>';
                 }
                 ?>
             </select>
