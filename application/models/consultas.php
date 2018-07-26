@@ -77,8 +77,8 @@ class Consultas extends CI_Model{
          }
     }
     
-    /*###########################################################################3
-     * 
+    /*###########################################################################
+     * Metodos para insertar registros en la base de datos
      */
     public function insertarVivienda($data)
     {
@@ -86,6 +86,9 @@ class Consultas extends CI_Model{
         $vivineda_agregada=  $this->db->affected_rows();
         return $vivineda_agregada;
     }
+    /* ###############################################################################
+     * Metodos para buscar en la base de datos
+     */
 }
 /* End of file consultas.php */
 /* Location: ./application/models/consultas.php */
