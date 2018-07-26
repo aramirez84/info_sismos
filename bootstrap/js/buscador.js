@@ -1,12 +1,19 @@
-function buscar_particular()
+$(function()
+{
+    $('#habitacion').change(function (){
+        valor = $('#habitacion').val();
+        opcion = 'habitacion';
+        buscar(valor,opcion);
+    });
+});
+
+function buscar(valor,opcion)
 {
     insert_pre('box-caja-1');
-    var valor = $('#caja_busqueda').val();
-    var avanzado=$('#select_avanzado').val();
-    $.get('buscar',
+    $.post('index.php/principal/busca_info',
     {
-      val:valor,
-      opcion:avanzado
+      valor:valor,
+      opcion:opcion
     },function(data)
     {
         $('#box-caja-1').animate({'opacity':'1'}, 800);
