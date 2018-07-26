@@ -9,7 +9,7 @@
             <?php
             if(isset($mensaje) && !empty($mensaje))
             {
-                echo '<div class="alert alert-danger input-file form-control-file" role="alert">';
+                echo '<div class="'.$class.' input-file form-control-file" role="alert">';
                 echo "$mensaje!";
                 echo '</div>';                
             }

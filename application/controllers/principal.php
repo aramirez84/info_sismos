@@ -39,20 +39,24 @@ class Principal extends CI_Controller {
                 if($insertar!=0)
                 {
                     $data['mensaje']="Registro(s), agregado(s) correctamente";
+                    $data['class']="alert alert-success";
                 }
                 else
                 {
                     $data['mensaje']="Ocurrio un error favor de intentar de nuevo";
+                    $data['class']="alert alert-danger";
                 }
             }
             else
             {
                 $data['mensaje']="Extención de archivo no válida";
+                $data['class']="alert alert-warning";
             }            
         }
         else
         {
             $data['mensaje']="Error al cargar el archivo, intentelo de nuevo";
+            $data['class']="alert alert-danger";
         }
         //$data['mensaje']="";
         $this->load->view('header');
@@ -80,6 +84,13 @@ class Principal extends CI_Controller {
         }
         fclose($handle);
         return $data;        
+    }
+    
+    public function busca_info()
+    {
+        $valor=  $this->input->post('valor');
+        $opcion=  $this->input->post('opcion');
+        echo "$valor<br>$opcion";
     }
     
 }
