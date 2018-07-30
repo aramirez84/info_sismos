@@ -109,38 +109,40 @@ class Principal extends CI_Controller {
     
     public function crear_xml($data)
     {
-        var_dump($data);
-        $filePath = 'datos.xml';
-        $dom     = new DOMDocument('1.0', 'utf-8'); 
-        $root      = $dom->createElement('markers'); 
-        foreach ($data as $key => $value)
+        if(!is_null($data))
         {
-            echo $key;
-            echo $value['idVivienda'];
-            $id=$value['idVivienda'];  
-            $nombre=$value['nombre']; 
-            $direccion=$value['direccion']; 
-            $latitud=$value['latitud']; 
-            $longitud=$value['longuitud']; 
-            $tipo=$value['tipo'];
-            $tipo_comercio=$value['tipo_comercio'];
-            $book = $dom->createElement('marker');
-            $book->setAttribute('id', $id);
-            $name=$dom->createElement('name', $nombre); 
-            $book->appendChild($name); 
-            $author   = $dom->createElement('author', $bookAuthor); 
-            $book->appendChild($author); 
-            $price    = $dom->createElement('price', $bookPrice); 
-            $book->appendChild($price); 
-            $isbn     = $dom->createElement('ISBN', $bookISBN); 
-            $book->appendChild($isbn); 
-            $category = $dom->createElement('category', $bookCategory); 
-            $book->appendChild($category);
-            $root->appendChild($book);
+            $filePath = 'datos.xml';
+            $dom= new DOMDocument('1.0', 'utf-8'); 
+            $root = $dom->createElement('markers'); 
+            foreach ($data as $key => $value)
+            {
+                $id=$value['idVivienda'];  
+                $nombre=$value['nombre']; 
+                $direccion=$value['direccion']; 
+                $latitud=$value['latitud']; 
+                $longitud=$value['longuitud']; 
+                $tipo=$value['tipo'];
+                $tipo_comercio=$value['tipo_comercio'];
+                $vivienda = $dom->createElement('marker');
+                $vivienda->setAttribute('id', $id);
+                $name=$dom->createElement('name', $nombre); 
+                $vivienda->appendChild($name); 
+                $address=$dom->createElement('address', $direccion); 
+                $vivienda->appendChild($address); 
+                $lat= $dom->createElement('lat', $latitud); 
+                $vivienda->appendChild($lat); 
+                $lng= $dom->createElement('lng', $longitud);
+                $vivienda->appendChild($lng); 
+                $type = $dom->createElement('type', $tipo); 
+                $vivienda->appendChild($type);
+                $type_trade = $dom->createElement('type_trade', $tipo_comercio); 
+                $vivienda->appendChild($type_trade);
+                $root->appendChild($vivienda);
+            }
+            $dom->appendChild($root); 
+            $dom->save($filePath); 
+            xml_print($dom);
         }
-        $dom->appendChild($root); 
-        $dom->save($filePath); 
-        return $xmlfile;
     }
 }
 
