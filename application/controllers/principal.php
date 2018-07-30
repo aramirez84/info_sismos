@@ -3,6 +3,7 @@
 class Principal extends CI_Controller {
     function __construct() {
         parent::__construct();
+        $this->load->helper('xml');
         $this->load->model('Consultas');
     }
 
@@ -90,9 +91,57 @@ class Principal extends CI_Controller {
     {
         $valor=  $this->input->post('valor');
         $opcion=  $this->input->post('opcion');
-        echo "$valor<br>$opcion";
+        switch ($opcion) {
+            case 'habitacion':
+                $habitaciones = $this->Consultas->busca_habitaciones($valor);
+                $this->crear_xml($habitaciones);
+                break;
+            case 'nivel':
+                break;
+            case 'delegacion':
+                break;
+            case 'zona':
+                break;
+            default:
+                break;
+        }
     }
     
+    public function crear_xml($data)
+    {
+        var_dump($data);
+        $filePath = 'datos.xml';
+        $dom     = new DOMDocument('1.0', 'utf-8'); 
+        $root      = $dom->createElement('markers'); 
+        foreach ($data as $key => $value)
+        {
+            echo $key;
+            echo $value['idVivienda'];
+            $id=$value['idVivienda'];  
+            $nombre=$value['nombre']; 
+            $direccion=$value['direccion']; 
+            $latitud=$value['latitud']; 
+            $longitud=$value['longuitud']; 
+            $tipo=$value['tipo'];
+            $tipo_comercio=$value['tipo_comercio'];
+            $book = $dom->createElement('marker');
+            $book->setAttribute('id', $id);
+            $name=$dom->createElement('name', $nombre); 
+            $book->appendChild($name); 
+            $author   = $dom->createElement('author', $bookAuthor); 
+            $book->appendChild($author); 
+            $price    = $dom->createElement('price', $bookPrice); 
+            $book->appendChild($price); 
+            $isbn     = $dom->createElement('ISBN', $bookISBN); 
+            $book->appendChild($isbn); 
+            $category = $dom->createElement('category', $bookCategory); 
+            $book->appendChild($category);
+            $root->appendChild($book);
+        }
+        $dom->appendChild($root); 
+        $dom->save($filePath); 
+        return $xmlfile;
+    }
 }
 
 /* End of file welcome.php */

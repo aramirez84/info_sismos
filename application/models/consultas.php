@@ -89,6 +89,20 @@ class Consultas extends CI_Model{
     /* ###############################################################################
      * Metodos para buscar en la base de datos
      */
+    public function busca_habitaciones($tipo_habitacion)
+    {
+        $this->db->where('tipo',$tipo_habitacion);
+        $query_habitaciones= $this->db->get('vivienda');
+        if($query_habitaciones->num_rows()!=0)
+         {
+            foreach($query_habitaciones->result_array() as $row)
+            {
+                $DanoHabitacion[]=$row;                
+            }
+            return $DanoHabitacion;
+         }
+        
+    }
 }
 /* End of file consultas.php */
 /* Location: ./application/models/consultas.php */

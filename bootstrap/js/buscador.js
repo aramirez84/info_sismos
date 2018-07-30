@@ -1,8 +1,8 @@
 $(function()
 {
-    $('#habitacion').change(function (){
-        valor = $('#habitacion').val();
-        opcion = 'habitacion';
+    $('select').change(function (){
+        valor = $(this).val();
+        opcion = $(this).attr('id');
         buscar(valor,opcion);
     });
 });
