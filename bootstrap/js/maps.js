@@ -10,12 +10,12 @@
         function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: new google.maps.LatLng(19.424530, -99.134076),
-          zoom: 15
+          zoom: 25
         });
         var infoWindow = new google.maps.InfoWindow;
 
           // Change this depending on the name of your PHP or XML file
-          downloadUrl('https://storage.googleapis.com/mapsdevsite/json/mapmarkers2.xml', function(data) {
+          downloadUrl('http://localhos/sismos/index/principal/busca_info',opcion,valor, function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
@@ -51,7 +51,7 @@
 
 
 
-      function downloadUrl(url, callback) {
+      function downloadUrl(url,opcion,valor, callback) {
         var request = window.ActiveXObject ?
             new ActiveXObject('Microsoft.XMLHTTP') :
             new XMLHttpRequest;
@@ -63,8 +63,9 @@
           }
         };
 
-        request.open('GET', url, true);
-        request.send(null);
+        request.open('POST', url, true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.send("opcion="+opcion+"&valor="+valor);
       }
 
       function doNothing() {}

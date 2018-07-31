@@ -94,7 +94,8 @@ class Principal extends CI_Controller {
         switch ($opcion) {
             case 'habitacion':
                 $habitaciones = $this->Consultas->busca_habitaciones($valor);
-                $this->crear_xml($habitaciones);
+                $xml_data=$this->crear_xml($habitaciones);
+                echo $xml_data;
                 break;
             case 'nivel':
                 break;
@@ -113,35 +114,22 @@ class Principal extends CI_Controller {
         {
             $filePath = 'datos.xml';
             $dom= new DOMDocument('1.0', 'utf-8'); 
-            $root = $dom->createElement('markers'); 
+            $node = $dom->createElement('markers');
+            $parnode=$dom->appendChild($node);
+            header("Content-type: text/xml");
             foreach ($data as $key => $value)
             {
-                $id=$value['idVivienda'];  
-                $nombre=$value['nombre']; 
-                $direccion=$value['direccion']; 
-                $latitud=$value['latitud']; 
-                $longitud=$value['longuitud']; 
-                $tipo=$value['tipo'];
-                $tipo_comercio=$value['tipo_comercio'];
-                $vivienda = $dom->createElement('marker');
-                $vivienda->setAttribute('id', $id);
-                $name=$dom->createElement('name', $nombre); 
-                $vivienda->appendChild($name); 
-                $address=$dom->createElement('address', $direccion); 
-                $vivienda->appendChild($address); 
-                $lat= $dom->createElement('lat', $latitud); 
-                $vivienda->appendChild($lat); 
-                $lng= $dom->createElement('lng', $longitud);
-                $vivienda->appendChild($lng); 
-                $type = $dom->createElement('type', $tipo); 
-                $vivienda->appendChild($type);
-                $type_trade = $dom->createElement('type_trade', $tipo_comercio); 
-                $vivienda->appendChild($type_trade);
-                $root->appendChild($vivienda);
+                $node = $dom->createElement('marker');
+                $newnode = $parnode->appendChild($node);
+                $newnode->setAttribute('id', $value['idVivienda']);
+                $newnode->setAttribute('name', $value['nombre']); 
+                $newnode->setAttribute('address', $value['direccion']); 
+                $newnode->setAttribute('lat', $value['latitud']); 
+                $newnode->setAttribute('lng', $value['longuitud']);
+                $newnode->setAttribute('type', $value['tipo']); 
+                $newnode->setAttribute('type_trade', $value['tipo_comercio']); 
             }
-            $dom->appendChild($root); 
-            $dom->save($filePath); 
-            xml_print($dom);
+            return $dom->saveXML();            
         }
     }
 }
