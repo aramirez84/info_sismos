@@ -1,4 +1,4 @@
-$(function()
+/*$(function()
 {
     $('select').change(function (){
         valor = $(this).val();
@@ -10,7 +10,7 @@ $(function()
 function buscar(valor,opcion)
 {
     insert_pre('box-caja-1');
-    downloadUrl('http://localhos/sismos/index/principal/busca_info',opcion,valor, function(data) {
+    downloadUrl('http://localhost/sismos/index.php/principal/busca_info',function(data) {
             var xml = data.responseXML;
             var markers = xml.documentElement.getElementsByTagName('marker');
             Array.prototype.forEach.call(markers, function(markerElem) {
@@ -43,7 +43,7 @@ function buscar(valor,opcion)
             });
           });
 }
-function downloadUrl(url,opcion,valor, callback) {
+function downloadUrl(url,callback) {
         var request = window.ActiveXObject ?
             new ActiveXObject('Microsoft.XMLHTTP') :
             new XMLHttpRequest;
@@ -63,3 +63,4 @@ function insert_pre(id_box)
 {
     $('#'+id_box).html('<div class="preloader-box"></div>');
 }
+*/
