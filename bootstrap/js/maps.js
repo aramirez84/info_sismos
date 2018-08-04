@@ -26,9 +26,10 @@ var customLabel = {
         $('select').change(function (){
             var zoom=map.getZoom();
             if(zoom!=10){
+                
                 map.setZoom(10);
                 infoWindow.close();
-                DeleteMarkers(datos);
+                //DeleteMarkers(datos);
             }
         valor = $(this).val();
         opcion = $(this).attr('id');
@@ -83,7 +84,6 @@ var customLabel = {
         var markers = datos;
         setMapOnAll(null);
         for (var i = 0; i < markers.length; i++) {
-            console.log(markers[i]);
             markers[i].setMap(null);
         }
         markers = [];
