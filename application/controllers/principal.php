@@ -59,7 +59,6 @@ class Principal extends CI_Controller {
             $data['mensaje']="Error al cargar el archivo, intentelo de nuevo";
             $data['class']="alert alert-danger";
         }
-        //$data['mensaje']="";
         $this->load->view('header');
         $this->load->view('menu');
         $this->load->view('subir_archivo',$data);
@@ -95,24 +94,29 @@ class Principal extends CI_Controller {
             case 'habitacion':
                 $habitaciones = $this->Consultas->busca_habitaciones($valor);
                 $xml_data=$this->crear_xml($habitaciones);
-                echo $xml_data;
                 break;
             case 'nivel':
+                $niveles = $this->Consultas->busca_nivel($valor);
+                $xml_data=$this->crear_xml($niveles);
                 break;
             case 'delegacion':
+                $delegaciones = $this->Consultas->busca_delegacion($valor);
+                $xml_data=$this->crear_xml($delegaciones);
                 break;
             case 'zona':
+                $zonas = $this->Consultas->busca_zonas($valor);
+                $xml_data=$this->crear_xml($zonas);
                 break;
             default:
                 break;
         }
+        echo $xml_data;
     }
     
     public function crear_xml($data)
     {
         if(!is_null($data))
         {
-            $filePath = 'datos.xml';
             $dom= new DOMDocument('1.0', 'utf-8'); 
             $node = $dom->createElement('markers');
             $parnode=$dom->appendChild($node);
