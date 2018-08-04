@@ -103,6 +103,56 @@ class Consultas extends CI_Model{
          }
         
     }
+    public function busca_nivel($nivel)
+    {
+        $this->db->select('*');
+        $this->db->from('vivienda');
+        $this->db->where('Nivel_dano_idNivel_dano',$nivel);
+        $this->db->join('nivel_dano', 'nivel_dano.idNivel_dano = vivienda.Nivel_dano_idNivel_dano');
+        $query_nivel=  $this->db->get();
+        if($query_nivel->num_rows()!=0)
+        {
+            foreach ($query_nivel->result_array() as $row)
+            {
+                $NivelDano[]=$row;
+            }
+            return $NivelDano;
+        }
+    }
+    
+    public function busca_delegacion($delegacion)
+    {
+        $this->db->select('*');
+        $this->db->from('vivienda');
+        $this->db->where('Delegacion_idDelegacion',$delegacion);
+        $this->db->join('deleg_mun', 'deleg_mun.idDelegacion = vivienda.Delegacion_idDelegacion');
+        $query_delegacion=  $this->db->get();
+        if($query_delegacion->num_rows()!=0)
+        {
+            foreach ($query_delegacion->result_array() as $row)
+            {
+                $danoDelegacion[]=$row;
+            }
+            return $danoDelegacion;
+        }
+    }
+    public function busca_zonas($zona)
+    {
+        $this->db->select('*');
+        $this->db->from('deleg_mun');
+        $this->db->where('zona_idZona',$zona);
+        $this->db->join('zona', 'zona.idZona = deleg_mun.zona_idZona');
+        $this->db->join('vivienda', 'deleg_mun.idDelegacion = vivienda.Delegacion_idDelegacion');
+        $query_zonas=  $this->db->get();
+        if($query_zonas->num_rows()!=0)
+        {
+            foreach ($query_zonas->result_array() as $row)
+            {
+                $danoZonas[]=$row;
+            }
+            return $danoZonas;
+        }
+    }
 }
 /* End of file consultas.php */
 /* Location: ./application/models/consultas.php */
