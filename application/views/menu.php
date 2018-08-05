@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
   <a class="navbar-brand" href="<?php echo base_url()?>">Menu</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -17,9 +18,10 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar">
-      <button class="btn btn-success" type="submit">Buscar</button>
+        <input class="form-control mr-sm-2" name="valor" id="valor" type="search" placeholder="Buscar">
+      <button class="btn btn-success" name="busca" id="busca" type="button">Buscar</button>
     </form>
+  </div>
   </div>
 </nav>
 <br>

@@ -153,6 +153,24 @@ class Consultas extends CI_Model{
             return $danoZonas;
         }
     }
+    public function busca_dano($palabra)
+    {
+        $this->db->select('*');
+        $this->db->from('vivienda');
+        $this->db->like('nombre',$palabra);
+        $this->db->or_like('direccion',$palabra);
+        $this->db->or_like('tipo_comercio',$palabra);
+        $this->db->or_like('descripcon',$palabra);
+        $query_zonas=  $this->db->get();
+        if($query_zonas->num_rows()!=0)
+        {
+            foreach ($query_zonas->result_array() as $row)
+            {
+                $danoZonas[]=$row;
+            }
+            return $danoZonas;
+        }
+    }
 }
 /* End of file consultas.php */
 /* Location: ./application/models/consultas.php */

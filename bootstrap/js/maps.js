@@ -25,20 +25,33 @@ var customLabel = {
         var infoWindow = new google.maps.InfoWindow;
         $('select').change(function (){
             var zoom=map.getZoom();
-            if(zoom!=10){
-                
-                map.setZoom(10);
+            if(zoom!=10)
+            {
                 infoWindow.close();
+                map.setZoom(10);
                 //DeleteMarkers(datos);
             }
         valor = $(this).val();
         opcion = $(this).attr('id');
         buscar(valor,opcion);
         });
+        
+        $('#busca').click(function()
+        {
+            var zoom=map.getZoom();
+            if(zoom!=10)
+            {
+                infoWindow.close();
+                map.setZoom(10);
+                //DeleteMarkers(datos);
+            }
+            valor = $('#valor').val();
+            opcion = $(this).attr('id');
+            alert(valor+" "+opcion);
+            buscar(valor,opcion);
+        });
         function buscar(valor,opcion)
         {
-       
-
           // Change this depending on the name of your PHP or XML file
           downloadUrl('http://localhost/sismos/index.php/principal/busca_info',function(data) {
             var xml = data.responseXML;

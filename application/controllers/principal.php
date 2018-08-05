@@ -107,6 +107,9 @@ class Principal extends CI_Controller {
                 $zonas = $this->Consultas->busca_zonas($valor);
                 $xml_data=$this->crear_xml($zonas);
                 break;
+            case 'busca':
+                $dano = $this->Consultas->busca_dano($valor);
+                $xml_data=$this->crear_xml($dano);
             default:
                 break;
         }
