@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-08-2018 a las 23:00:29
+-- Tiempo de generación: 06-08-2018 a las 00:14:07
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.6.21
 
@@ -40,6 +40,11 @@ CREATE TABLE IF NOT EXISTS `deleg_mun` (
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=ucs2 COLLATE=ucs2_spanish2_ci;
 
 --
+-- Truncar tablas antes de insertar `deleg_mun`
+--
+
+TRUNCATE TABLE `deleg_mun`;
+--
 -- Volcado de datos para la tabla `deleg_mun`
 --
 
@@ -74,6 +79,11 @@ CREATE TABLE IF NOT EXISTS `estados` (
   PRIMARY KEY (`idEstados`)
 ) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=ucs2 COLLATE=ucs2_spanish2_ci;
 
+--
+-- Truncar tablas antes de insertar `estados`
+--
+
+TRUNCATE TABLE `estados`;
 --
 -- Volcado de datos para la tabla `estados`
 --
@@ -126,6 +136,11 @@ CREATE TABLE IF NOT EXISTS `nivel_dano` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=ucs2 COLLATE=ucs2_spanish2_ci;
 
 --
+-- Truncar tablas antes de insertar `nivel_dano`
+--
+
+TRUNCATE TABLE `nivel_dano`;
+--
 -- Volcado de datos para la tabla `nivel_dano`
 --
 
@@ -149,6 +164,11 @@ CREATE TABLE IF NOT EXISTS `tipo_dano` (
   PRIMARY KEY (`idTipo_dano`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=ucs2 COLLATE=ucs2_spanish2_ci;
 
+--
+-- Truncar tablas antes de insertar `tipo_dano`
+--
+
+TRUNCATE TABLE `tipo_dano`;
 --
 -- Volcado de datos para la tabla `tipo_dano`
 --
@@ -180,7 +200,7 @@ CREATE TABLE IF NOT EXISTS `vivienda` (
   `Tipo_dano_idTipo_dano` int(11) NOT NULL,
   `Delegacion_idDelegacion` int(11) NOT NULL,
   `nombre` varchar(60) COLLATE ucs2_spanish2_ci DEFAULT NULL,
-  `direccion` varchar(45) COLLATE ucs2_spanish2_ci DEFAULT NULL,
+  `direccion` varchar(150) COLLATE ucs2_spanish2_ci DEFAULT NULL,
   `latitud` float(10,6) DEFAULT NULL,
   `longuitud` float(10,6) DEFAULT NULL,
   `tipo_comercio` varchar(100) COLLATE ucs2_spanish2_ci DEFAULT NULL,
@@ -204,6 +224,11 @@ CREATE TABLE IF NOT EXISTS `zona` (
   PRIMARY KEY (`idZona`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=ucs2 COLLATE=ucs2_spanish2_ci;
 
+--
+-- Truncar tablas antes de insertar `zona`
+--
+
+TRUNCATE TABLE `zona`;
 --
 -- Volcado de datos para la tabla `zona`
 --
