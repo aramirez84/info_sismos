@@ -1,3 +1,7 @@
+<form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" name="valor" id="valor" type="search" placeholder="Buscar">
+      <button class="btn btn-success" name="busca" id="busca" type="button">Buscar</button>
+    </form>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-10">

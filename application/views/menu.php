@@ -17,10 +17,6 @@
         <a class="nav-link" href="<?php echo base_url()?>index.php/principal/graficas">Graficas</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" name="valor" id="valor" type="search" placeholder="Buscar">
-      <button class="btn btn-success" name="busca" id="busca" type="button">Buscar</button>
-    </form>
   </div>
   </div>
 </nav>
