@@ -47,7 +47,6 @@ var customLabel = {
             }
             valor = $('#valor').val();
             opcion = $(this).attr('id');
-            alert(valor+" "+opcion);
             buscar(valor,opcion);
         });
         function buscar(valor,opcion)
