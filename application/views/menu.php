@@ -14,7 +14,7 @@
         <a class="nav-link" href="<?php echo base_url()?>index.php/principal/carga_info">Cargar Información</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Graficas</a>
+        <a class="nav-link" href="<?php echo base_url()?>index.php/principal/graficas">Graficas</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

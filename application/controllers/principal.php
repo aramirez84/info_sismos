@@ -7,8 +7,7 @@ class Principal extends CI_Controller {
         $this->load->model('Consultas');
     }
 
-    public function index()
-    {
+    public function index(){
         $this->load->view('header');
         $data['zonas'] =  $this->Consultas->get_zona();
         $data['delegacion'] = $this->Consultas->get_deleg_mun();
@@ -19,16 +18,14 @@ class Principal extends CI_Controller {
         $this->load->view('footer');
     }
     
-    public function carga_info()
-    {
+    public function carga_info(){
         $this->load->view('header');
         $this->load->view('menu');
         $this->load->view('subir_archivo');
         $this->load->view('footer');
     }
     
-    public function procesar_archivo()
-    {
+    public function procesar_archivo(){
         if(isset($_FILES) && !empty($_FILES))
         {
             $nombreArchivo = $_FILES['sel_file']['name'];
@@ -65,8 +62,7 @@ class Principal extends CI_Controller {
         $this->load->view('footer');
     }
     
-    public function validaDatos($file)
-    {
+    public function validaDatos($file){
         $header = NULL;
         $data = array();
         $archivo = $file['sel_file']['tmp_name'];
@@ -86,8 +82,7 @@ class Principal extends CI_Controller {
         return $data;        
     }
     
-    public function busca_info()
-    {
+    public function busca_info(){
         $valor=  $this->input->post('valor');
         $opcion=  $this->input->post('opcion');
         switch ($opcion) {
@@ -116,8 +111,7 @@ class Principal extends CI_Controller {
         echo $xml_data;
     }
     
-    public function crear_xml($data)
-    {
+    public function crear_xml($data){
         if(!is_null($data))
         {
             $dom= new DOMDocument('1.0', 'utf-8'); 
@@ -138,6 +132,17 @@ class Principal extends CI_Controller {
             }
             return $dom->saveXML();            
         }
+    }
+    public function graficas(){
+        $this->load->view('header');
+        //$data['zonas'] =  $this->Consultas->get_zona();
+        //$data['delegacion'] = $this->Consultas->get_deleg_mun();
+        //$data['nivelDano'] = $this->Consultas->get_nivel_dano();
+        //$data['tipoHabitacion'] = $this->Consultas->get_tipo_habitación();
+        $this->load->view('menu');
+        $this->load->view('panel');
+        $this->load->view('footer');
+        
     }
 }
 
