@@ -5,87 +5,46 @@ html, body{
 body{
 	background-color: none;
 }
-
-/* Input boxes */
-.design_form input[type=text]
-{
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-	width:200px;
-  	min-height: 28px;
-	padding: 4px 20px 4px 8px;
-	font-size: 12px;
-	-moz-transition: all .2s linear;
-	-webkit-transition: all .2s linear;
-	transition: all .2s linear;
-}
-
-.input {     border: 1px solid #006; } 
-.container{
-	margin: auto;
-}
 @media screen and (min-width: 1200px)
 {
     /* Defining the default settings for the main container for the charts */
-    #container,#graficas_evaluacion,#graficas2
+    #container
     {
         margin: auto;
-        border: 3px solid #ccc;
-        width: 900px;
+        border: 1px solid #337ab7;
+        width: 1100px;
         height: auto;
         padding: 10px;
         overflow: hidden;
         background-color: #ffffff;
     }
-    #tabla-graficas
-    {
-      width:900px;
-    }
+    
     #MotivosBajas,#RotacionAcumulado,#BajasPersonal
     {
         width: 100%;
         height: 350px;
-        border: solid 2px #D8DCDF;
+        /*border: solid 2px #D8D;*/
     }
     #BajasArea,#Antiguedad,#RotacionPersonalArea,#BajasRol,#BajasCritico,#AcumuladoCritico
     {
         width: 50%;
         height: 350px;
-        border: solid 2px #D8DCDF;
+        /*border: solid 2px #D8DCDF;*/
     }
     
     #RotacionPersonalArea,#BajasRol,#BajasCritico,#nivelA,#nivelC,#nivelE,#nivelG
     {
         float: left;
     }
-    #nivelA,#nivelB,#nivelC,#nivelD,#nivelE,#nivelF,#nivelG,#nivelH
-    {
-        width: 49.5%;
-        height: 350px;
-        border: solid 2px #D8DCDF;
-    }
-    #nivelB,#nivelD,#nivelF,#nivelH
-    {
-        float: right;
-    }
-    #nivelI
-    {
-        width: 100%;
-        height: 350px;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    
 }
 @media screen and (max-width: 1198px) and (min-width: 800px)
 {
     /* Defining the default settings for the main container for the charts */
-    #container, #graficas_evaluacion,#graficas2
+    #container
     {
         margin: auto;
-        border: 3px solid #ccc;
-        width: 800px;
+        border: 1px solid #337ab7;
+        width: 950px;
         height: auto;
         padding: 10px;
         overflow: hidden;
@@ -103,39 +62,22 @@ body{
     {
         width: 50%;
         height: 350px;
-        border: solid 2px #D8DCDF;
+        /*border: solid 2px #D8DCDF;*/
     }
     #MotivosBajas,#RotacionAcumulado,#BajasPersonal
     {
         width: 100%;
         height: 350px;
-        border: solid 2px #D8DCDF;
-    }
-    #nivelA,#nivelB,#nivelC,#nivelD,#nivelE,#nivelF,#nivelG,#nivelH
-    {
-        width: 49.5%;
-        height: 350px;
-        border: solid 2px #D8DCDF;
-    }
-    #nivelB,#nivelD,#nivelF,#nivelH
-    {
-        float: right;
-    }
-    #nivelI
-    {
-        width: 100%;
-        height: 350px;
-        border: solid 2px #D8DCDF;
-        float: left;
+        /*border: solid 2px #D8DCDF;*/
     }
 }
-@media screen and (max-width: 790px) and (min-width: 600px)
+@media screen and (max-width: 799px) and (min-width: 600px)
 {
     /* Defining the default settings for the main container for the charts */
-    #container, #graficas_evaluacion,#graficas2
+    #container
     {
         margin: auto;
-        border: 3px solid #ccc;
+        border: 1px solid #337ab7;
         width: 600px;
         height: auto;
         padding: 10px;
@@ -159,39 +101,17 @@ body{
         float: left;
         width: 100%;
         height: 350px;
-        border: solid 2px #D8DCDF;
-    }
-    #nivelA,#nivelC,#nivelE,#nivelG
-    {
-        float: left;
-    }
-    #nivelA,#nivelB,#nivelC,#nivelD,#nivelE,#nivelF,#nivelG,#nivelH
-    {
-        width: 49%;
-        height: 350px;
-        border: solid 2px #D8DCDF;
-    }
-    #nivelB,#nivelD,#nivelF,#nivelH
-    {
-        float: right;
-    }
-    #nivelI
-    {
-        width: 100%;
-        height: 350px;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    
+        /*border: solid 2px #D8DCDF;*/
+    }    
 }
-@media screen and (max-width: 598px)
+@media screen and (max-width: 599px)
 {
     /* Defining the default settings for the main container for the charts */
-    #container, #graficas_evaluacion,#graficas2
+    #container
     {
         margin: auto;
-        border: 3px solid #ccc;
-        width: 90%;
+        border: 1px solid #337ab7;
+        width: 95%;
         height: auto;
         padding: 10px;
         overflow: hidden;
@@ -213,24 +133,7 @@ body{
         float: left;
         width: 100%;
         height: 350px;
-        border: solid 2px #D8DCDF;
-    }
-    #nivelA,#nivelC,#nivelE,#nivelG,#nivelB,#nivelD,#nivelF,#nivelH
-    {
-        float: left;
-    }
-    #nivelA,#nivelB,#nivelC,#nivelD,#nivelE,#nivelF,#nivelG,#nivelH
-    {
-        width: 100%;
-        height: 350px;
-        border: solid 2px #D8DCDF;
-    }
-    #nivelI
-    {
-        width: 100%;
-        height: 350px;
-        border: solid 2px #D8DCDF;
-        float: left;
+       /* border: solid 2px #D8DCDF; */
     }
 }
 
@@ -329,292 +232,28 @@ td.grafica2
 .titulo
 {
     width: 100%;
-    background-color: #D8DCDF;
     height: 25px;
     text-align: center;
-    color: #004276;
-    font-weight: bold;
-    font-size: 1.3em;
-    font-family: "sanuk",Arial;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
 }
 .tituloA
 {
     width: 100%;
-    background-color: #D8DCDF;
     height: 25px;
     text-align: center;
-    color: #004276;
-    font-weight: bold;
-    font-size: 1.18em;
-    font-family: "sanuk",Arial;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+
 }
 td.titulo
 {
     width: 50%;
-    background-color: #D8DCDF;
     height: 20px;
     text-align: center;
-    color: #004276;
-    font-weight: bold;
-    font-size: 1.3em;
-    font-family: "sanuk",Arial;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
 }
-/*****************************      Estilos para el modulo de Desviacion        *****************************/
-.titulo2
-{
-    width: 100%;
-    background-color: #D8DCDF;
-    height: 20px;
-    text-align: center;
-    color: #004276;
-    font-weight: bold;
-    font-size: .9em;
-    font-family: "sanuk",Arial;
-}
-@media screen and (min-width: 1200px)
-{
-    #desviacionTiempoPastel,#desviacionCostaRecursoPastel,#desviacionRentabilidadPastel
-    {
-        width: 32.8%;
-        height: 300px;
-        border: solid 2px #D8DCDF;
-        position: relative;
-        float: left;
-            
-    }
-    #proyectosDesviacion3
-    {
-        width: 100%;
-        height: 500px;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    #proyectosDesviacion
-    {
-        width: 100%;
-        height: 400px;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    #proyectos,#proyectos2
-    {
-        width: 100%;
-        border: solid 2px #D8DCDF;
-        float: left;
-        height: 300px;
-    }
-}
-@media screen and (max-width: 1198px) and (min-width: 800px)
-{
-    #desviacionTiempoPastel,#desviacionCostaRecursoPastel,#desviacionRentabilidadPastel
-    {
-        width: 32.8%;
-        height: 300px;
-        border: solid 2px #D8DCDF;
-        position: relative;
-        float: left;
-            
-    }
-    #proyectosDesviacion3
-    {
-        width: 100%;
-        height: 500px;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    #proyectosDesviacion
-    {
-        width: 100%;
-        height: 400px;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    #proyectos,#proyectos2
-    {
-        width: 100%;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    #proyectos,#proyectos2
-    {
-        height: 250px;
-    }
-}
-@media screen and (max-width: 790px) and (min-width: 600px)
-{
-    #desviacionTiempoPastel,#desviacionCostaRecursoPastel,#desviacionRentabilidadPastel
-    {
-        width: 100%;
-        height: 300px;
-        border: solid 2px #D8DCDF;
-        position: relative;
-        float: left;
-            
-    }
-    #proyectosDesviacion3
-    {
-        width: 100%;
-        height: 500px;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    #proyectosDesviacion
-    {
-        width: 100%;
-        height: 400px;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    #proyectos,#proyectos2
-    {
-        width: 100%;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    #proyectos,#proyectos2
-    {
-        height: 250px;
-    }
-    
-}
-@media screen and (max-width: 598px)
-{
-    #desviacionTiempoPastel,#desviacionCostaRecursoPastel,#desviacionRentabilidadPastel
-    {
-        width: 100%;
-        height: 300px;
-        border: solid 2px #D8DCDF;
-        position: relative;
-        float: left;
-            
-    }
-    #proyectosDesviacion3
-    {
-        width: 100%;
-        height: 500px;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    #proyectosDesviacion
-    {
-        width: 100%;
-        height: 400px;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    #proyectos,#proyectos2
-    {
-        width: 100%;
-        border: solid 2px #D8DCDF;
-        float: left;
-    }
-    #proyectos,#proyectos2
-    {
-        height: 250px;
-    }
-    
-}
-/*****************************      Estilos para el modulo de Incumplimiento        *****************************/
-.link
-{
-    font-family: verdana, arial, sans-serif;
-    font-size: 10pt;
-    font-weight: bold;
-    padding: 8px;
-    background-color: #83d3d6;
-    color: #000000;
-    text-decoration: none;
- } 
- @media screen and (min-width: 1200px)
-{
-    #metricasIncumplimiento,#incumplimientoProyecto
-    {
-        width: 49.5%;
-        height: 300px;
-        border: solid 2px #D8DCDF;
-        position: relative; 
-    }
-    #montos
-    {
-        width: 100%;
-        height: 400px;
-        border: solid 2px #D8DCDF;
-        position: relative; 
-    }
-    #incumplimientoProyecto,#montos
-    {
-        float: left;
-    }
-    #metricasIncumplimiento
-    {
-        float: right;
-    }
-    
-}
-@media screen and (max-width: 1198px) and (min-width: 800px)
-{
-    #metricasIncumplimiento,#incumplimientoProyecto
-    {
-        width: 49.5%;
-        height: 300px;
-        border: solid 2px #D8DCDF;
-        position: relative; 
-    }
-    #montos
-    {
-        width: 100%;
-        height: 400px;
-        border: solid 2px #D8DCDF;
-        position: relative; 
-    }
-    #incumplimientoProyecto,#montos
-    {
-        float: left;
-    }
-    #metricasIncumplimiento
-    {
-        float: right;
-    }
-}
-@media screen and (max-width: 790px) and (min-width: 600px)
-{
-    #metricasIncumplimiento,#incumplimientoProyecto
-    {
-        width: 100%;
-        height: 300px;
-        border: solid 2px #D8DCDF;
-        position: relative; 
-    }
-    #montos
-    {
-        width: 100%;
-        height: 400px;
-        border: solid 2px #D8DCDF;
-        position: relative; 
-    }
-    #incumplimientoProyecto,#metricasIncumplimiento,#montos
-    {
-        float: left;
-    }
-}
-@media screen and (max-width: 598px)
-{
-    #metricasIncumplimiento,#incumplimientoProyecto
-    {
-        width: 100%;
-        height: 300px;
-        border: solid 2px #D8DCDF;
-        position: relative; 
-    }
-    #montos
-    {
-        width: 100%;
-        height: 400px;
-        border: solid 2px #D8DCDF;
-        position: relative; 
-    }
-    #incumplimientoProyecto,#metricasIncumplimiento,#montos
-    {
-        float: left;
-    }
-}        
