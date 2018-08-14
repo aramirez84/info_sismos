@@ -141,6 +141,7 @@ class Principal extends CI_Controller {
         //$data['tipoHabitacion'] = $this->Consultas->get_tipo_habitación();
         $this->load->view('menu');
         $this->load->view('panel');
+        $this->load->view('panel2');
         $this->load->view('footer');
         
     }
