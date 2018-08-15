@@ -145,6 +145,19 @@ class Principal extends CI_Controller {
         $this->load->view('footer');
         
     }
+    public function get_dano_zona()
+    {
+        $zonas = $this->Consultas->get_zona();
+        $dano=array();
+        foreach ($zonas as $value) {
+            $zona=$this->Consultas->dano_zonas($value['nombre']);
+            if(count($zona)!=0){
+                $dano[$value['nombre']]=$zona;
+            }
+        }
+        header('Content-Type: application/json');
+        echo json_encode($dano);
+    }
 }
 
 /* End of file welcome.php */

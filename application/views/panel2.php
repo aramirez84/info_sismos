@@ -1,8 +1,16 @@
 <link rel="stylesheet" href="<?php echo base_url()?>bootstrap/css/panel.css" type="text/css">
+<script src="<?php echo base_url()?>bootstrap/amcharts/amcharts.js"></script>
+<script src="<?php echo base_url()?>bootstrap/amcharts/pie.js"></script>
+<link rel="stylesheet" href="<?php echo base_url()?>bootstrap/amcharts/plugins/export/export.css" type="text/css" media="all" />
+<script src="<?php echo base_url()?>bootstrap/amcharts/themes/light.js"></script>
+<script src="<?php echo base_url()?>bootstrap/amcharts/plugins/dataloader/dataloader.min.js"></script>
+<script src="<?php echo base_url()?>bootstrap/js/graficas_zona.js" type="text/javascript"></script>
+<script src="<?php echo base_url()?>bootstrap/js/zonas.js" type="text/javascript"></script>
+
 <div id="graficas" align="right">
             <div id='container'>
                 <div id="RotacionPersonalArea">
-                    <div class="tituloA">% Rotaci&oacute;n de Personal de la</div>
+                    <div class="tituloA">Zonas</div>
                     <div id="flecha"></div>
                     <div id='grafica2' style="height: 95%; width: 90%;"></div>
 		</div>
