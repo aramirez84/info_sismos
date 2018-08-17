@@ -171,18 +171,35 @@ class Consultas extends CI_Model{
             return $danoZonas;
         }
     }
-    public function dano_zonas($zona)
+    public function dano_zonas()
     {
-        $this->db->select('count(*) as total, s.nombre, m.nombre_delegacion');
+        $this->db->select('count(*) as total, s.nombre');
         $this->db->from('zona s');
-        $this->db->where('s.nombre',$zona);
         $this->db->join('deleg_mun m','s.idZona=m.zona_idZona');
         $this->db->join('vivienda v', 'm.idDelegacion=v.Delegacion_idDelegacion');
-        $this->db->group_by("idZona, s.nombre, m.nombre_delegacion"); 
+        $this->db->group_by("s.nombre"); 
         $dano_zona=  $this->db->get();
         if($dano_zona->num_rows()!=0)
         {
             foreach ($dano_zona->result_array() as $row)
+            {
+                $dano[]= $row;
+            }
+            return $dano;
+        }
+    }
+    
+    public function dano_delegacion()
+    {
+        $this->db->select('count(*) as total, m.nombre_delegacion');
+        $this->db->from('zona s');
+        $this->db->join('deleg_mun m','s.idZona=m.zona_idZona');
+        $this->db->join('vivienda v', 'm.idDelegacion=v.Delegacion_idDelegacion');
+        $this->db->group_by("m.nombre_delegacion"); 
+        $dano_deleg=  $this->db->get();
+        if($dano_deleg->num_rows()!=0)
+        {
+            foreach ($dano_deleg->result_array() as $row)
             {
                 $dano[]= $row;
             }
