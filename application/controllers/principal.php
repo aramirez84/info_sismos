@@ -156,6 +156,24 @@ class Principal extends CI_Controller {
         header('Content-Type: application/json');
         echo json_encode($deleg);
     }
+    public function get_dano_tipo()
+    {
+        $tipo=$this->Consultas->dano_tipo();
+        header('Content-Type: application/json');
+        echo json_encode($tipo);
+    }
+    public function get_dano_nivel()
+    {
+        $nivel=$this->Consultas->dano_nivel();
+        header('Content-Type: application/json');
+        echo json_encode($nivel);
+    }
+    public function get_dano_tipo_habitacion()
+    {
+        $tipo=$this->Consultas->dano_tipo_habitacion();
+        header('Content-Type: application/json');
+        echo json_encode($tipo);
+    }
 }
 
 /* End of file welcome.php */

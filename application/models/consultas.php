@@ -206,6 +206,55 @@ class Consultas extends CI_Model{
             return $dano;
         }
     }
+    public function dano_tipo()
+    {
+        $this->db->select('tipo_dano, count(tipo_dano) as total');
+        $this->db->from('vivienda v');
+        $this->db->join('nivel_dano n','v.Nivel_dano_idNivel_dano=n.idNivel_dano');
+        $this->db->join('tipo_dano t', 'v.Tipo_dano_idTipo_dano=t.idTipo_dano');
+        $this->db->group_by("tipo_dano"); 
+        $dano_tipo=  $this->db->get();
+        if($dano_tipo->num_rows()!=0)
+        {
+            foreach ($dano_tipo->result_array() as $row)
+            {
+                $dano[]= $row;
+            }
+            return $dano;
+        }
+    }
+    public function dano_nivel()
+    {
+        $this->db->select('nombre_dano, count(nombre_dano) as total');
+        $this->db->from('vivienda v');
+        $this->db->join('nivel_dano n','v.Nivel_dano_idNivel_dano=n.idNivel_dano');
+        $this->db->join('tipo_dano t', 'v.Tipo_dano_idTipo_dano=t.idTipo_dano');
+        $this->db->group_by("nombre_dano"); 
+        $dano_nivel=  $this->db->get();
+        if($dano_nivel->num_rows()!=0)
+        {
+            foreach ($dano_nivel->result_array() as $row)
+            {
+                $dano[]= $row;
+            }
+            return $dano;
+        }
+    }
+    public function dano_tipo_habitacion()
+    {
+        $this->db->select('tipo_comercio, count(tipo_comercio) as total');
+        $this->db->from('vivienda v');
+        $this->db->group_by("tipo_comercio"); 
+        $dano_tipo_comercio=  $this->db->get();
+        if($dano_tipo_comercio->num_rows()!=0)
+        {
+            foreach ($dano_tipo_comercio->result_array() as $row)
+            {
+                $dano[]= $row;
+            }
+            return $dano;
+        }
+    }
 }
 /* End of file consultas.php */
 /* Location: ./application/models/consultas.php */

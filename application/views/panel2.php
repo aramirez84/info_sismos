@@ -8,6 +8,9 @@
 <script src="<?php echo base_url()?>bootstrap/js/graficas_zona.js" type="text/javascript"></script>
 <script src="<?php echo base_url()?>bootstrap/js/zonas.js" type="text/javascript"></script>
 <script src="<?php echo base_url()?>bootstrap/js/delegaciones.js" type="text/javascript"></script>
+<script src="<?php echo base_url()?>bootstrap/js/tipos.js" type="text/javascript"></script>
+<script src="<?php echo base_url()?>bootstrap/js/niveles.js" type="text/javascript"></script>
+<script src="<?php echo base_url()?>bootstrap/js/tipos_habitacion.js" type="text/javascript"></script>
 
 <div id="graficas" align="right">
             <div id='container'>
@@ -27,18 +30,9 @@
                     <div class="titulo">Nivel de daño</div>
                     <div id='grafica5' style="height: 92%; width: 90%;"></div>
 		</div>
-                <div id="BajasRol">
-                    <div class="titulo">Acumulado Bajas por Nivel(Rol)</div>
-                    <div class="niveles"> </div>
-                    <div id='grafica4' style="height: 80%; width: 90%;"></div>
-		</div>
-                <div id="Antiguedad">
-                    <div class="titulo">Habitaciones</div>
+                <div id="RotacionAcumulado">
+                    <div class="titulo">Tipo de habitacion</div>
                     <div id='grafica6' style="height: 100%; width: 90%;"></div>
-		</div>
-                <div id="BajasCritico">
-                    <div class="titulo">Bajas Personal Clave y Cr&iacute;tico</div>
-                    <div id='grafica7' style="height: 100%; width: 90%;"></div>
 		</div>
             </div>
             <br><br>
