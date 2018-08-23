@@ -1,8 +1,8 @@
-tipo,Nivel_dano_idNivel_dano,Tipo_dano_idTipo_dano,Delegacion_idDelegacion,nombre,direccion,latitud,longuitud,tipo_comercio,descripcon,Zona_idZona
-Escuela,5,1,4,San Francisco Culhuacan,"Culhuacan CTM V, 04260 Ciudad de México, CDMX",19.329175,-99.111292,Universidad,Prueba  maps,2
-Plaza,4,3,4,Galerias Coapa,"Calz. del Hueso 519, Residencial Miramontes, 14300 Ciudad de México, CDMX, México",19.3027854,-99.1231384,Placa Comercial,Centro Comercial Galerias Coapa,2
-Edificio,4,4,14,Multifamiliar,"Conjunto Urbano Tlalpan, Ciudad de México, CDMX, México",19.3384978,-99.1423291,Edificio,"Multifamilar Tlapan Zona  A, B y D",2
-Escuela,1,5,14,Colegio Enrique Rebsamen,"Colegio Enrique Rebsamen, Calzada de las Brujas, Hacienda Real, 04460 Pedregal de Tepepan, Ciudad de México, México",19.29677001,-99.13038433,Primaria,Escuela primaria y Jardin de ñinos Enrique Rebsamen,2
-Embarcadero,3,6,16,Embarcadero Xocimilco,"Tenochtitlán, Año de Juárez, 16440 Xochimilco, Ciudad de México, México",19.24681547,-99.08395529,Embarcadero,,4
-Iglesia,2,8,13,Capilla de la Villa Centroamericana,"Capilla de la Villa Centroamericana, Gabriela Mistral, 13278 Xochimilco, Ciudad de México, México",19.28321568,-99.05387163,Capilla,,4
-Escuela,1,4,13,Secundaria Tecnica #116,"Ojo de Agua, 13450 Tláhuac, Ciudad de México, México",19.2904107,-99.00860131,Secundaria,Secundaria tecnica N0 116,4
+tipo,Nivel_dano_idNivel_dano,Tipo_dano_idTipo_dano,Delegacion_idDelegacion,nombre,direccion,latitud,longuitud,tipo_comercio,descripcon
+Escuela,5,1,4,San Francisco Culhuacan,"Culhuacan CTM V, 04260 Ciudad de México, CDMX",19.329175,-99.111292,Universidad,Prueba  maps
+Plaza,4,3,4,Galerias Coapa,"Calz. del Hueso 519, Residencial Miramontes, 14300 Ciudad de México, CDMX, México",19.3027854,-99.1231384,Placa Comercial,Centro Comercial Galerias Coapa
+Edificio,4,4,14,Multifamiliar,"Conjunto Urbano Tlalpan, Ciudad de México, CDMX, México",19.3384978,-99.1423291,Edificio,"Multifamilar Tlapan Zona  A, B y D"
+Escuela,1,5,14,Colegio Enrique Rebsamen,"Colegio Enrique Rebsamen, Calzada de las Brujas, Hacienda Real, 04460 Pedregal de Tepepan, Ciudad de México, México",19.29677001,-99.13038433,Primaria,Escuela primaria y Jardin de ñinos Enrique Rebsamen
+Embarcadero,3,6,16,Embarcadero Xocimilco,"Tenochtitlán, Año de Juárez, 16440 Xochimilco, Ciudad de México, México",19.24681547,-99.08395529,Embarcadero,
+Iglesia,2,8,13,Capilla de la Villa Centroamericana,"Capilla de la Villa Centroamericana, Gabriela Mistral, 13278 Xochimilco, Ciudad de México, México",19.28321568,-99.05387163,Capilla,
+Escuela,1,4,13,Secundaria Tecnica #116,"Ojo de Agua, 13450 Tláhuac, Ciudad de México, México",19.2904107,-99.00860131,Secundaria,Secundaria tecnica N0 116
